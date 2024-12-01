@@ -6,7 +6,7 @@ export default function Button({name,onclick,widthPercentage}) {
   return (
     <div>
       <motion.button
-        style={{width:`${widthPercentage}%`}}
+        style={{width:`${widthPercentage}%`,marginTop:"10px"}}
         onClick={onclick}
         className="px-20  py-2 rounded-md relative btn"
         initial={{ "--x": "100%", scale: 1 }}

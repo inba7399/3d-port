@@ -30,9 +30,10 @@ export default function Navbar({ children }) {
           className="navbar c-space"
         >
           <a href="#">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-          <a href="#" className="">
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="https://github.com/inba7399" target="_blank"
+              rel="noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"

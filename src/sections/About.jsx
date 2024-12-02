@@ -87,10 +87,10 @@ const About = () => {
             />
 
             <div className="space-y-2 ">
-              <p className="grid-subtext text-center">Contact me</p>
+              <p className="grid-subtext text-center">Call me</p>
               <div className="copy-container" onClick={handleCopy}>
                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">inbasagar7@gmail.com</p>
+                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">+91 6381280614</p>
               </div>
             </div>
           </div>

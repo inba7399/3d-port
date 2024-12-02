@@ -23,7 +23,7 @@ const Hero = () => {
             <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">Hi, I'am Inba sagar<span className='waving-hand'>👋🏽</span></p>
             <p className="hero_tag text-gray_gradient">Bulding creative & responsive App</p>
         </div>
-        <div className="w-full h-full absolute inset-0" style={{marginTop:"-60px"}}>
+        <div className="w-full h-full absolute inset-0" >
            <Canvas className='w-full h-full'>
              <Suspense fallback={<CanvasLoader/>}>
                <PerspectiveCamera makeDefault position={[0,0,20]} />

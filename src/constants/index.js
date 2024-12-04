@@ -82,7 +82,7 @@
       desc: 'This weather app allows users to search for any location and instantly access current weather details. It provides information such as temperature, wind speed, humidity, and more, offering a quick and reliable way to stay updated on local and global weather conditions.',
       subdesc:
         'The app allows users to enter a location, making an API call to fetch real-time weather data. The retrieved details, such as temperature, wind speed, and humidity, are then displayed on the user interface for an up-to-date view of the weather.',
-      href: 'https://chic-starlight-bc5789.netlify.app',
+      href: 'https://vermillion-sunshine-e16c53.netlify.app',
       texture: '/textures/project/project3.mp4',
       logo: '/assets/weather-logo.png',
       logoStyle: {

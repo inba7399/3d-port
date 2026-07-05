@@ -11,16 +11,10 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.118.0",
     "@react-three/fiber": "^8.17.10",
-    "gsap": "^3.12.5",
-    "leva": "^0.9.35",
-    "maath": "^0.10.8",
-    "motion": "^11.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-globe.gl": "^2.27.6",
     "react-responsive": "^10.0.0",
     "three": "^0.171.0"
   },
@@ -36,6 +30,7 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
     "postcss": "^8.4.49",
+    "puppeteer-core": "^25.3.0",
     "tailwindcss": "^3.4.15",
     "vite": "^6.0.1"
   }

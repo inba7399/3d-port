@@ -1,0 +1,4 @@
+character.glb — "Knight" from the KayKit Adventurers Character Pack
+by Kay Lousberg (www.kaylousberg.com)
+License: CC0 (Creative Commons Zero) — free for personal/commercial use.
+Source: https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0

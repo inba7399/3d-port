@@ -45,16 +45,20 @@ function ProjectRow({ project, index }) {
               {hostname}
             </span>
           </div>
-          {/* reduce-motion users get a still first frame instead of autoplay */}
-          <video
-            src={nearView ? project.video : undefined}
-            autoPlay={!reducedMotion}
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="aspect-video w-full bg-black-100 object-cover object-top"
-          />
+          {/* fixed 16:9 box via padding-ratio (works on browsers without
+              aspect-ratio support), so the frame never resizes to the video */}
+          <div className="relative w-full bg-black-100 pt-[56.25%]">
+            {/* reduce-motion users get a still first frame instead of autoplay */}
+            <video
+              src={nearView ? project.video : undefined}
+              autoPlay={!reducedMotion}
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 h-full w-full object-cover object-top"
+            />
+          </div>
         </a>
       </motion.div>
 

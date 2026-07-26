@@ -1,39 +1,31 @@
-# 🎡 Inba Sagar · Portfolio Park
+# Inba Sagar · Portfolio
 
-An interactive 3D portfolio: walk a little character around a theme park and
-visit the attractions — each one opens a section of the portfolio.
+A professional single-page portfolio with scroll-driven animations, built
+mobile-first. (The previous 3D "portfolio park" version lives in git history —
+commit `9cbf25e`.)
 
-| Attraction | Section |
+## Sections
+
+| Section | Highlights |
 | --- | --- |
-| 👋 Info kiosk | About me |
-| 🧪 Tech Lab dome | Tech stack (with orbiting icons) |
-| 🎪 Carnival midway (3 booths) | Projects — one booth per project |
-| ✉️ Post office | Contact form |
+| Hero | Staggered headline reveal, parallax glow orbs, scroll cue |
+| Tech marquee | Infinite scrolling band of the tech stack (pauses on hover) |
+| About | Bento grid — story, live IST clock, terminal card, copy-to-clipboard contacts, animated stat counters |
+| Projects | Alternating rows with autoplaying video previews in browser-style frames |
+| Contact | EmailJS-powered form + direct channels |
 
-## Controls
-
-- **Desktop:** the mouse is captured automatically (pointer lock, like a third-person game) and steers the camera · `WASD` / arrows walk camera-relative · scroll zooms · `E` opens an attraction · `Esc` frees the mouse / closes · `M` map · `H` help · `R` reset camera · click the floating `?` badges too
-- **Mobile:** left side of the screen = floating joystick to walk · right side = drag to look around (both work at once) · tap the button to open
-- **Map 🗺️** (top-right): fast-travel to any section
-- Progress (⭐) tracks which sections you've explored
+The top nav is the classic floating pill navbar from the original design:
+blurred white pill, hides when you scroll down, peeks back on hover/scroll up.
 
 ## Tech
 
-React 18 · Vite · @react-three/fiber + drei · Tailwind CSS · EmailJS
+React 18 · Vite · Tailwind CSS · Framer Motion · EmailJS
 
-The park sits on an island in a teal ocean. The world (booths, ferris wheel,
-trees, carts) is procedural geometry so it renders instantly; the playable
-knight is the only downloaded model and streams in behind a procedural
-stand-in. The cartoon look comes from cel-shaded toon materials with a shared
-3-step gradient, canvas-painted grass/path textures, a gradient sky dome and
-outlined paths. Music and UI sounds are synthesized with WebAudio — no audio
-files. Shadows are enabled on desktop only; touch devices get capped DPR and
-blob shadows.
-
-## Credits
-
-- Character: "Knight" from the [KayKit Adventurers pack](https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0)
-  by Kay Lousberg — CC0 (see `public/models/CREDITS.txt`)
+- All content (profile, tech stack, projects, nav links) lives in
+  `src/data/content.js` — edit there, the sections render from it.
+- Scroll reveals use shared variants from `src/lib/anim.js`; visitors with
+  "reduce motion" enabled get instant transitions (`MotionConfig` +
+  `prefers-reduced-motion` CSS).
 
 ## Run
 
@@ -41,4 +33,6 @@ blob shadows.
 npm install
 npm run dev      # local dev server
 npm run build    # production build in dist/
+npm run preview  # serve dist/ locally
+node smoke-test.mjs  # puppeteer smoke test against the preview server
 ```

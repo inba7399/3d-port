@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         generalsans: ['General Sans', 'sans-serif'],
       },
+      screens: {
+        xs: '480px',
+      },
       colors: {
         black: {
           DEFAULT: '#000',
@@ -20,11 +23,13 @@ export default {
           800: '#E4E4E6',
           700: '#D6D9E9',
           600: '#AFB0B6',
-          500: '#62646C',
+          500: '#8A8D97', // ≥4.5:1 on the page/card backgrounds (WCAG AA)
         },
-      },
-      backgroundImage: {
-        terminal: "url('/assets/terminal.png')",
+        accent: {
+          DEFAULT: '#8b7bff',
+          violet: '#c77dff',
+          cyan: '#5ec8f8',
+        },
       },
     },
   },
